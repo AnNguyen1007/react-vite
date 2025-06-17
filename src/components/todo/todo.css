@@ -1,25 +1,50 @@
 .todo-container {
-    margin: 50px auto;
-    width: 600px;
+    margin: 100px auto;
+    width: 500px;
+
 }
 
 .todo-title {
     font-size: 40px;
     margin: 15px 0;
     text-align: center;
-    color: orange;
-    font-weight: 600;
+    color: black;
+    font-weight: 400;
+}
+
+.todo-bio {
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: center;
+    color: black;
+    font-weight: 100;
 
 }
 
-.todo-new {
-    width: 100%;
+
+/* .todo-data {
+    font-size: 15px;
+    color: gray;
+    table-layout: fixed;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
     display: flex;
+    flex-direction: column;
     gap: 15px;
-    justify-content: center;
-}
+} */
 
 .todo-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 cột bằng nhau */
+    gap: 20px;
+}
+
+.todo-data div {
+    font-size: 15px;
+    color: gray;
     table-layout: fixed;
     margin-top: 20px;
     border-radius: 5px;
@@ -30,34 +55,94 @@
     gap: 15px;
 }
 
-
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+.todo-data-2 {
+    font-size: 15px;
+    color: gray;
+    table-layout: fixed;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+.todo-button {
+    background-color: #1db1f6;
+    color: rgb(255, 255, 255);
+    border: none;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    padding: 12px 70px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
 }
 
-.logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+.todo-button:hover {
+    background-color: #cb3293;
 }
 
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+.line {
+    height: 2px;
+    background-color: rgb(227, 227, 227);
+    width: 100%;
+    margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .logo {
-        animation: logo-spin infinite 20s linear;
-    }
+
+.todo-gray {
+    font-size: 15px;
+    margin: 15px 0;
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(152, 151, 151);
+    font-weight: 100;
+}
+
+.button-2 {
+    position: relative;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 15px 40px 10px 45px;
+    /* chừa chỗ bên trái cho icon */
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.button-2::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.facebook::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733547.png');
+    /* Facebook icon */
+}
+
+.google::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/281/281764.png');
+    /* Google icon */
 }
